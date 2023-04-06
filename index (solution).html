@@ -7,6 +7,71 @@
     DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run". 
     */
 
+// problem 1
+let student = {
+  name: "John",
+  age: 16,
+  grade: 10
+};
+
+let studentName = student.name;
+let studentAge = student['age'];
+
+console.log(student.grade); // or console.log(student['grade']);
+
+// problem 2
+let car = {
+  make: "Toyota",
+  model: "Camry",
+  year: 2022,
+  color: "blue"
+};
+
+let carMakeModel = car.make + ' ' + car.model;
+let carYear = car['year'];
+
+console.log(car.color); // or console.log(car['color']);
+
+// problem 3
+console.log(book.title); // "The Hitchhiker's Guide to the Galaxy"
+console.log(book.author); // "Douglas Adams"
+
+console.log(book.characters[0]['name']); // "Arthur Dent"
+
+let lastIndex = book.characters.length - 1;
+console.log(book.characters[lastIndex].occupation); // "President of the Galaxy"
+
+// problem 4
+let bobMathGrade = students[1].grades['math'];
+console.log(bobMathGrade); // 75
+
+let charlieNameAndHistoryGrade = students[2].name + ' ' + students[2].grades.history;
+console.log(charlieNameAndHistoryGrade); // "Charlie 91"
+
+for (let i = 0; i < students.length; i++) {
+  let name = students[i].name;
+  let scienceGrade = students[i].grades.science;
+  console.log(`${name}: ${scienceGrade}`);
+}
+
+// problem 5
+let person = {
+  name: "Alice",
+  age: 25,
+  address: {
+    street: "123 Main St",
+    city: "Anytown",
+    state: "CA"
+  }
+};
+
+let personCopy = { ...person };
+personCopy.address.street = "456 Elm St";
+
+console.log(person.address.street); // logs "123 Main St"
+console.log(personCopy.address.street); // logs "456 Elm St"
+
+
   </script> 
  
 </body>

@@ -26,6 +26,7 @@
     animal.habitat = "Hospital";
 
     /* 
+<<<<<<< HEAD
     PROBLEM 4: Use the delete operator to delete the "color" property in the animal Object. Console.log the animal object to confirm the animal's color has been removed in the console. 
     */
     delete animal.color;
@@ -48,6 +49,155 @@
    };
 
    anotherAnimal["Favorite Food"] = "Wild Boar";
+=======
+    PROBLEM 1: 
+    Create an object called student with properties for name, age, and grade. Use dot notation to access the name property and 
+    store it in a variable called studentName. Use square bracket notation to access the age property and store it in a variable 
+    called studentAge. Finally, log the grade property using either dot or square bracket notation.
+    */
+    let student = {
+      name: "John",
+      age: 16,
+      grade: 10
+    };
+
+    let studentName = student.name;
+    let studentAge = student['age'];
+
+    console.log(student.grade); // or console.log(student['grade']);
+
+    /* 
+    PROBLEM 2: 
+    Create an object called car with properties for make, model, year, and color. 
+    Use dot notation to access the make and model properties and concatenate them
+    together with a space in between. Store the result in a variable called carMakeModel. 
+    Use square bracket notation to access the year property and store it in a variable called carYear. 
+    Finally, log the color property using either dot or square bracket notation.
+    */
+    let car = {
+      make: "Toyota",
+      model: "Camry",
+      year: 2022,
+      color: "blue"
+    };
+
+    let carMakeModel = car.make + ' ' + car.model;
+    let carYear = car['year'];
+
+    console.log(car.color); // or console.log(car['color']);
+
+ /* 
+    PROBLEM 3: 
+    With the code below, use dot notation to log the title and author properties of 
+    the book object. Then, use square bracket notation to log the 
+    name of the first character in the characters array. 
+    Finally, use dot notation to log the occupation of the last character in the characters array.
+    */
+    let book = {
+      title: "The Hitchhiker's Guide to the Galaxy",
+      author: "Douglas Adams",
+      publicationYear: 1979,
+      characters: [
+        { name: "Arthur Dent", occupation: "Everyman" },
+        { name: "Ford Prefect", occupation: "Researcher" },
+        { name: "Zaphod Beeblebrox", occupation: "President of the Galaxy" }
+      ]
+    };
+    console.log(book.title); // "The Hitchhiker's Guide to the Galaxy"
+    console.log(book.author); // "Douglas Adams"
+
+    console.log(book.characters[0]['name']); // "Arthur Dent"
+
+    let lastIndex = book.characters.length - 1;
+    console.log(book.characters[lastIndex].occupation); // "President of the Galaxy"
+
+/* 
+    PROBLEM 4: 
+    Using the code below, Use square bracket notation to access the math grade for the second student in the students array and store it in a variable 
+    called bobMathGrade. Then, use dot notation to access the name and history grade for the third student in the students array and concatenate them together 
+    with a space in between.
+    Store the result in a variable called charlieNameAndHistoryGrade. Finally, use a loop to iterate over the students array and 
+    log the name and science grade for each student.
+    */
+   let students = [
+   {
+      name: "Alice",
+      grades: {
+        math: 95,
+        science: 83,
+        history: 88
+      }
+    },
+    {
+      name: "Bob",
+      grades: {
+        math: 75,
+        science: 92,
+        history: 87
+      }
+    },
+    {
+      name: "Charlie",
+      grades: {
+        math: 88,
+        science: 85,
+        history: 91
+      }
+    }
+   ];
+  let bobMathGrade = students[1].grades['math'];
+  console.log(bobMathGrade); // 75
+
+  let charlieNameAndHistoryGrade = students[2].name + ' ' + students[2].grades.history;
+  console.log(charlieNameAndHistoryGrade); // "Charlie 91"
+
+  for (let i = 0; i < students.length; i++) {
+    let name = students[i].name;
+    let scienceGrade = students[i].grades.science;
+    console.log(`${name}: ${scienceGrade}`);
+  }
+
+     /* 
+    PROBLEM 5 (DEBUGGING): 
+    The code below is intended to make a copy of the person object, modify the street 
+    property of the address object on the copy, and then log the street property on 
+    the original person object to the console. However, there is a bug in the code that 
+    is causing it to not work as intended. Your task is to identify and fix the bug.
+    */
+    /*
+    let person = {
+      name: "Alice",
+      age: 25,
+      address: {
+        street: "123 Main St",
+        city: "Anytown",
+        state: "CA"
+      }
+    };
+
+    let personCopy = person; // 
+    personCopy.address.street = "456 Elm St";
+
+    console.log(person.address.street); // should log "456 Elm St"
+    */
+    let person = {
+      name: "Alice",
+      age: 25,
+      address: {
+        street: "123 Main St",
+        city: "Anytown",
+        state: "CA"
+      }
+    };
+
+    let personCopy = { ...person };
+    personCopy.address.street = "456 Elm St";
+
+    console.log(person.address.street); 
+    console.log(personCopy.address.street); // logs "456 Elm St"
+
+
+>>>>>>> practice-objects
   </script> 
  
 </body>

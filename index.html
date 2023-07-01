@@ -51,7 +51,9 @@
       publicationYear: 1979,
       protagonist: {name: "Arthur Dent", occupation: "Everyman"}
     };
-    //ENTER YOUR CODE HERE
+    console.log(`${book.title} - ${book.author}`);
+    console.log(book.protagonist['name']);
+    console.log(book.protagonist.occupation);
 
     /*
     PROBLEM 4:
@@ -62,8 +64,10 @@
       name: "Alice",
       grades: {math: 95, science: 83, history: 88}
     }
-    //ENTER YOUR CODE HERE
-
+    let aliceMathGrade = aliceStudent['grades']['math'];
+    let aliceHistoryGrade = aliceStudent['grades']['history'];
+    let aliceNameAndHistoryGrade = `${aliceStudent['name']} ${aliceHistoryGrade}`;
+    console.log(aliceNameAndHistoryGrade);
 
     /*
     PROBLEM 5 (DEBUGGING):
@@ -72,7 +76,7 @@
     the original person object to the console. However, there is a bug in the code that
     is causing it to not work as intended. Your task is to identify and fix the bug.
     */
-    /*
+
     let person = {
       name: "Alice",
       age: 25,
@@ -85,9 +89,9 @@
 
     let personCopy = person;
     personCopy.address.street = "456 Elm St";
+    // Changed 'person' to 'personCopy' in dot notation
+    console.log(personCopy.address.street); // should log "456 Elm St"
 
-    console.log(person.address.street); // should log "456 Elm St"
-    */
 
   </script>
   <section

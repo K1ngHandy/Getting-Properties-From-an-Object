@@ -13,7 +13,7 @@
     Use square bracket notation to access the age property and store it in a variable called studentAge. 
     Finally, log the grade property using either dot or square bracket notation.
     */
-    let student = {
+    const student = {
       name: 'Steve',
       age: '100',
       grade: 'Some college'
@@ -29,7 +29,15 @@
     Use square bracket notation to access the year property and store it in a variable called carYear.
     Finally, log the color property using either dot or square bracket notation. 
     */
-    //ENTER YOUR CODE HERE
+    const car = {
+      make: 'Toyota',
+      model: 'GT86',
+      year: 99,
+      color: 'purple'
+    }
+    let carMakeModel = `${car.make} ${car.model}`;
+    let carYear = car['year'];
+    console.log(car['color']);
 
     /*
    PROBLEM 3:
